@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Google Addition Test Case</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bc0eca0d-e92a-46d8-bcf3-d53ec8f69a18</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c0317365-5781-4d03-ba94-5ae129309f7b</id>
+      <masked>false</masked>
+      <name>math_function</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>69444c74-3da2-4b11-a9bd-45943d0777d0</id>
+      <masked>false</masked>
+      <name>expected_result</name>
+   </variable>
+</TestCaseEntity>
