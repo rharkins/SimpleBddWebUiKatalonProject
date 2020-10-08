@@ -50,20 +50,25 @@ class AdditionSteps {
 	@Given("User navigate to Google search page")
 	def navigateToGoogleSearchPage() {
 		println ("\n I am inside navigateToGoogleSearchPage")
+		WebUI.openBrowser("http://www.google.com")
 	}
 
 	@When("User enters (.*)")
 	def enterMathFunction(String math_function) {
-		println (math_function)
+		println ("\n I am inside enterMathFunction(String math_function)")
+		WebUI.setText(findTestObject('Object Repository/Page_Google/input_Sign in_q'), math_function)
 	}
 
 	@And("User clicks the Google Search button")
 	def clickGoogleSearchButton() {
 		println ("\n I am inside clickGoogleSearchButton")
+		WebUI.click(findTestObject('Object Repository/Page_Google/input_Remove_btnK'))
 	}
 
-	@Then("The Google results page is displayed with the correct result from the addition of the numeric values")
-	def verifyAdditionResult() {
+	@Then("The Google results page is displayed with the correct (.*) from the addition of the numeric values")
+	def verifyAdditionResult(String result) {
 		println ("\n I am inside verifyAdditionResult")
+		WebUI.verifyElementText(findTestObject('Object Repository/Page_34 - Google Search/div_7 (function()var adocument.getElementBy_60f9ac'), result)
+		WebUI.closeBrowser()
 	}
 }

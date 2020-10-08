@@ -26,7 +26,14 @@ WebUI.sendKeys(findTestObject('Page_Google/input_Sign in_q'), Keys.chord(Keys.EN
 
 WebUI.click(findTestObject('Object Repository/Page_34 - Google Search/div_7 (function()var adocument.getElementBy_60f9ac'))
 
-WebUI.verifyElementText(findTestObject('Page_34 - Google Search/div_7 (function()var adocument.getElementBy_60f9ac'), expected_result)
-
+if(WebUI.verifyElementText(findTestObject('Page_34 - Google Search/div_7 (function()var adocument.getElementBy_60f9ac'), expected_result)
+== true)
+{
+	println(math_function + "' = " + expected_result)
+}
+else
+{
+	println(math_function + " <> " + expected_result)
+}
 WebUI.closeBrowser()
 
